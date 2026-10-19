@@ -1,0 +1,23 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Introduction" />
+
+# Relay Design System
+
+A small design system for dense, high-stakes operations tools: queues, dashboards and review flows where people are busy and mistakes are costly.
+
+## Principles
+
+1. **Status never relies on color alone.** Every badge, alert and stat pairs color with words.
+2. **The next step is always visible.** Empty and error states say what happened and what to do.
+3. **Keyboard first.** Tables, tabs and panels work without a mouse, with one visible focus style.
+4. **Tokens, not hex codes.** Components only use semantic tokens, so dark mode and rebrands need no component changes.
+
+## Tokens in two layers
+
+- **Primitive tokens** are raw values: `--rds-color-blue-600`, `--rds-space-4`.
+- **Semantic tokens** say what a value is for: `--rds-accent`, `--rds-text-secondary`, `--rds-danger-bg`.
+
+Light and dark modes remap the semantic layer only. Source of truth is `tokens/tokens.json`; `npm run tokens` generates CSS and TypeScript, and `npm run contrast` checks every text and UI pairing against WCAG 2.2 AA in both modes.
+
+Use the **Theme** button in the toolbar to switch modes, and the **Accessibility** tab to see automated checks for each story.

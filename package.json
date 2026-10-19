@@ -1,0 +1,34 @@
+{
+  "name": "relay-design-system",
+  "version": "0.1.0",
+  "description": "A small React + TypeScript design system with two-layer tokens, light and dark modes, and accessibility built into each component.",
+  "license": "MIT",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "tokens": "node scripts/build-tokens.mjs",
+    "contrast": "node scripts/check-contrast.mjs",
+    "storybook": "npm run tokens && storybook dev -p 6006",
+    "build-storybook": "npm run tokens && npm run contrast && storybook build",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.0",
+    "@storybook/addon-essentials": "^8.6.0",
+    "@storybook/blocks": "^8.6.0",
+    "@storybook/react": "^8.6.0",
+    "@storybook/react-vite": "^8.6.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "storybook": "^8.6.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0"
+  }
+}
